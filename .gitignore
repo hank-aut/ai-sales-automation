@@ -1,0 +1,27 @@
+# secrets & local config
+.env
+*.env
+!.env.example
+
+# credentials / data that must never ship
+*.xlsx
+*.csv
+*-results.json
+pipeline-results.json
+exclusion-list.json
+current-customers/
+signed-agreements/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# backups / editor / os
+*.bak
+*.bak-*
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,5 @@
+# The pipeline leans on the Python standard library (urllib, json, subprocess, ssl).
+# External services are called over HTTP or via their CLIs (e.g. the Salesforce `sf`
+# CLI for CRM writes), so runtime deps are intentionally minimal.
+
+openpyxl>=3.1        # reads the current-customer exclusion list (.xlsx)
