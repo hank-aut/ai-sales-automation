@@ -88,8 +88,12 @@ specific email actually go out?). Nothing sends cold without both.
 | `outbound/outbound-post-card-slack.py` | Posts the interactive approval card |
 | `outbound/outbound-action-slack.py` | Handles button taps: send + CRM + sequence |
 | `outbound/outbound-sequence.py` | Auto follow-up Email 2/3 engine |
-| `inbound/inbound-action-slack.py` | Inbound lead → approval card → send |
+| `inbound/inbound-post-draft-slack.py` | Inbound lead → ROE check → posts the approval card |
+| `inbound/lead-region-classify.py` | LLM territory routing (APAC / EMEA / NA) for inbound leads |
+| `inbound/inbound-action-slack.py` | Inbound button handler: send + CRM |
 | `inbound/inbound-sequence.py` | Inbound follow-up sequence engine |
+| `shared/rudy-slack-listener.py` | Long-running daemon: turns Slack button taps into sends |
+| `shared/reply_classify.py` | Reply / departure detection used to gate sequences |
 | `shared/email_safety.py` | AI-tell / tone scrubber shared across flows |
 | `signals/mkt-passive-poll.py` | Passive market-event poller → auto-cards |
 
